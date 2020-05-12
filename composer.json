@@ -15,7 +15,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Niroxy\\vybe-paypal-ipn\\": "src/"
+            "Niroxy\\PaypalIPN\\": "src/"
         }
     }
 }
