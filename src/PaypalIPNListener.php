@@ -59,8 +59,10 @@ class PaypalIPNListener {
             $get_magic_quotes_exists = true;
         }
         foreach ($myPost as $key => $value) {
-            if ($get_magic_quotes_exists == true && get_magic_quotes_gpc() == 1) {
-                $value = urlencode(stripslashes($value));
+            if ($get_magic_quotes_exists == true) {
+                if(!get_magic_quotes_gpc()) {
+                    $value = urlencode(stripslashes($value));
+                }
             } else {
                 $value = urlencode($value);
             }
