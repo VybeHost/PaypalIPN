@@ -23,7 +23,7 @@ class PaypalIPNServiceProvider extends ServiceProvider {
      */
     public function register()
     {
-        $this->app->make('Niroxy\PaypalIPN\PaypalIPNListener');
+        $this->app->make('Niroxy\vybe-paypal-ipn\PaypalIPNListener');
     }
 
 }
